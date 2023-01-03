@@ -117,12 +117,19 @@ handleSelect = (userId) => {
   });
 };
 
+handleDelete = (userId) => {
+	this.setState({
+		usersData: this.state.usersData.filter((user) => userId !== user.id),
+	});
+};
+
   render() {
     return (
       <ul className={styles.wrapperList}>
         <UserListItem
           usersData = {this.state.usersData}
           handleSelect = {this.handleSelect}
+					handleDelete = {this.handleDelete}
         />
       </ul>
     );
