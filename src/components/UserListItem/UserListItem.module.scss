@@ -1,0 +1,66 @@
+@import '../../common/styles/styles.scss';
+
+.wrapperList{
+  width: 960px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 20px;
+  background: $white-color;
+}
+
+.wrapperListItem{
+  display: flex;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.wrapperListItemDefault{
+  background: $white-grey-color;
+}
+
+.wrapperListItemSelect{
+  background: $lite-grey-color;
+}
+
+.userImg{
+  width: 125px;
+  height: 125px;
+  border: solid 3px $grey-color;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wrapperItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.name{
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  color: $dark-grey-color;
+}
+
+.nickName{
+  font-size: 1rem;
+  color: $grey-color;
+}
+
+.wrapperBtn{
+display: flex;
+align-items: center;
+}
+
+.btn{
+  margin-right: 20px;
+  color: $grey-color;
+  font-size: 20px;
+  border: none;
+}

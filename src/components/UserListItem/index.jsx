@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { FaTrash } from 'react-icons/fa'
+import styles from './UserListItem.module.scss';
+
+const { wrapperListItemSelect, wrapperListItemDefault } = styles;
 
 class UserListItem extends Component {
   render() {
@@ -8,18 +11,21 @@ class UserListItem extends Component {
 
     const userListItem = usersData.map(({ id, name, nickName, img, age, gender, isSelected, }) => (
       <li
+        className={`${styles.wrapperListItem} ${
+        isSelected ? wrapperListItemSelect : wrapperListItemDefault
+      }`}
         id={id}
         key={id}
         onClick={() => handleSelect(id)}
       >
-        <img src={img.src} alt={img.alt} />
-				<div>
+        <img className={styles.userImg} src={img.src} alt={img.alt} />
+				<div className={styles.wrapperItem}>
 					<div>
-						<p>{name}</p>
-						<p>{nickName}</p>
+						<p className={styles.name}>{name}</p>
+						<p className={styles.nickName}>{nickName}</p>
 					</div>
-					<div>
-						<button type="submit">
+					<div className={styles.wrapperBtn}>
+						<button className={styles.btn} type="submit">
 							<FaTrash/>
 						</button>
 					</div>
